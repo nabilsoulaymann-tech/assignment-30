@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            border: solid;
+            margin-top:20px;
+            background-color: lightgrey;
+            width:200px;
+            height:200px;
+            
+        }
+    </style>
+<h1 id="mainTitle">My Student Page</h1>
+<p id='pageStatus'>The page is loading</p>
+<p id='message'>I am learning JavaScript</p>
+<button id='hellobutton'>Say HELLO</button>
+<button id='namebtn'>Enter My Name</button>
+<button id='msgbtn'>Change my message</button>
+<div id="hoverbox">
+  <p>Move your mouse here</p>
+</div>
+<ul>
+    <li>Football</li>
+    <li>Guitar</li>
+    <li>Basketball</li>
+</ul>
+
+<script>
+  window.addEventListener('load',function(){
+    document.getElementById('pageStatus').textContent='The page is loaded'
+  })
+  document.getElementById('hellobutton').addEventListener('click',function(){
+    alert('Welcome To My Page!')
+  })
+  document.getElementById('namebtn').addEventListener('click',function(){
+    x=prompt('What is your name')
+    document.getElementById('mainTitle').textContent='Welcome '+x+' !'
+  })
+  document.getElementById('msgbtn').addEventListener('click',function(){
+    document.getElementById('message').textContent='I can make my page interactive!'
+  })
+  document.getElementById('hoverbox').addEventListener('mouseover',function(){
+    document.getElementById('hoverbox').textContent='You found me!'
+    document.getElementById('hoverbox').style.backgroundColor='orange'
+  })
+   document.getElementById('hoverbox').addEventListener('mouseout',function(){
+    document.getElementById('hoverbox').textContent='Move your mouse here'
+    document.getElementById('hoverbox').style.backgroundColor='lightgrey'
+  })
+  document.getElementById('mainTitle').addEventListener('dblclick',function(){
+    document.getElementById('mainTitle').textContent='My Student Page'
+  })
+</script>
+    </body>
+    </html>
